@@ -675,7 +675,7 @@ export const REPORT_DATA = {
 
         // Ad spend fields
         adSpendTikTok: 4702.00,
-        adSpendMeta: 1482.00,
+        adSpendMeta: 2746.00,
         adSpendSnapchat: 0.00,
         
         get adSpend() {
@@ -690,6 +690,10 @@ export const REPORT_DATA = {
             // Media ROAS = Property Value from Paid Channels divided by Media Spend
             // Total digital ads total including generics is 189515. Ad spend is 6184.
             return Number((this.digitalAdsTotal / this.adSpend).toFixed(2));
+        },
+
+        get mathwaaRoi() {
+            return Number((this.digitalAdsShare / this.adSpend).toFixed(2));
         }
     },
     salesTeam: [
@@ -701,7 +705,7 @@ export const REPORT_DATA = {
     ] as SalesPerformanceItem[],
     spendBreakdown: [
         { name_en: 'TikTok Ads', name_ar: 'إعلانات تيك توك', value: 4702, color: '#000000' },
-        { name_en: 'Meta Ads', name_ar: 'إعلانات ميتا', value: 1482, color: '#1877F2' },
+        { name_en: 'Meta Ads', name_ar: 'إعلانات ميتا', value: 2746, color: '#1877F2' },
         { name_en: 'Creative Production', name_ar: 'الإنتاج الإبداعي', value: 1500, color: '#A855F7' }
     ],
     sourcePerformance: [

@@ -233,7 +233,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                             />
                         </svg>
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
-                            <span className="text-4xl sm:text-6xl font-bold tracking-tighter text-[#1D1D1F]" dir="ltr">7.21x</span>
+                            <span className="text-4xl sm:text-6xl font-bold tracking-tighter text-[#1D1D1F]" dir="ltr">{financials.mathwaaRoi}x</span>
                             <span className="text-xs sm:text-sm font-bold uppercase text-gray-400 mt-2 font-cairo">عائد مثوى على الاستثمار</span>
                         </div>
                     </div>
@@ -241,11 +241,11 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-6 font-cairo">
                             العائد على الاستثمار (حصة مثوى الصافية).<br/>
                             مقابل كل <span className="text-[#1D1D1F] font-bold">١ ريال</span> يُنفق على الإعلام،
-                            تم توليد <span className="text-[#1D1D1F] font-bold">٧.٢١ ريال</span> كحصة إيرادات صافية لشركة مثوى خلال هذه الفترة.
+                            تم توليد <span className="text-[#1D1D1F] font-bold">{financials.mathwaaRoi} ريال</span> كحصة إيرادات صافية لشركة مثوى خلال هذه الفترة.
                         </p>
                         <div className="bg-gray-50 rounded-2xl p-4 sm:p-5 border border-gray-100 text-right">
                              <p className="text-xs text-gray-500 leading-relaxed font-medium font-cairo font-normal">
-                                تمثل حصة مثوى الصافية الفعلية {formatCurrency(financials.digitalAdsShare)} من المستأجرين المستقطبين من الإعلانات، ومقارنةً بإنفاق إعلاني {formatCurrency(financials.adSpend)}، ينتج عنها عائد مباشر قدره ٧.٢١ ضعفاً.
+                                تمثل حصة مثوى الصافية الفعلية {formatCurrency(financials.digitalAdsShare)} من المستأجرين المستقطبين من الإعلانات، ومقارنةً بإنفاق إعلاني {formatCurrency(financials.adSpend)}، ينتج عنها عائد مباشر قدره {financials.mathwaaRoi} ضعفاً.
                              </p>
                         </div>
                     </div>

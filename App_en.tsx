@@ -223,7 +223,7 @@ const App_en: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                             />
                         </svg>
                         <div className="absolute inset-0 flex flex-col items-center justify-center">
-                            <span className="text-4xl sm:text-6xl font-bold tracking-tighter text-[#1D1D1F]">7.21x</span>
+                            <span className="text-4xl sm:text-6xl font-bold tracking-tighter text-[#1D1D1F]">{financials.mathwaaRoi}x</span>
                             <span className="text-xs sm:text-sm font-bold uppercase text-gray-400 mt-2">Mathwaa ROI</span>
                         </div>
                     </div>
@@ -231,12 +231,12 @@ const App_en: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-6">
                             Return on Investment (Mathwaa Net Share).<br/>
                             For every <span className="text-[#1D1D1F] font-bold">1 SAR</span> spent on media, 
-                            <span className="text-[#1D1D1F] font-bold"> 7.21 SAR</span> in net revenue share was generated for Mathwaa during this updated reporting period.
+                            <span className="text-[#1D1D1F] font-bold"> {financials.mathwaaRoi} SAR</span> in net revenue share was generated for Mathwaa during this updated reporting period.
                         </p>
                         <div className="bg-gray-50 rounded-2xl p-4 sm:p-5 border border-gray-100 text-left">
                              <p className="text-xs text-gray-500 leading-relaxed font-medium">
                                 <span className="font-bold text-[#1D1D1F] uppercase tracking-wide mr-2 block sm:inline mb-1 sm:mb-0">Note on Share</span>
-                                Mathwaa's actual net share is {formatCurrency(financials.digitalAdsShare)} from ad-acquired tenants, compared to {formatCurrency(financials.adSpend)} media spend, resulting in a direct net ROI of 7.21×.
+                                Mathwaa's actual net share is {formatCurrency(financials.digitalAdsShare)} from ad-acquired tenants, compared to {formatCurrency(financials.adSpend)} media spend, resulting in a direct net ROI of {financials.mathwaaRoi}×.
                              </p>
                         </div>
                     </div>

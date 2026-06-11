@@ -81,6 +81,17 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     return null;
 };
 
+const translateSalesName = (name: string) => {
+  const repMap: { [key: string]: string } = {
+    "Amal": "أمل",
+    "Al-Shihana": "الشيهانة",
+    "Raghad": "رغد",
+    "Fahmida": "فهميدة",
+    "Salsabila": "سلسبيل"
+  };
+  return repMap[name] || name;
+};
+
 const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }) => {
   const { financials, spendBreakdown, period, sourcePerformance, salesTeam, branchPerformance } = REPORT_DATA;
   const [showFormulas, setShowFormulas] = useState(false);
@@ -264,7 +275,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
                     {salesTeam.map((member, idx) => (
                         <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all group text-right">
-                            <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors font-cairo">{member.name}</h4>
+                            <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors font-cairo">{translateSalesName(member.name)}</h4>
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1">حصة مايو / يونيو</p>

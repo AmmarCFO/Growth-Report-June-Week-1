@@ -4,7 +4,7 @@ import App_en from './App_en';
 import App_ar from './App_ar';
 
 const App: React.FC = () => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('ar');
 
   const toggleLanguage = () => {
     setLanguage(prev => (prev === 'en' ? 'ar' : 'en'));

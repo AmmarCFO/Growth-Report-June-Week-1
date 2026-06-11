@@ -348,7 +348,7 @@ const App_en: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
             transition={{ delay: 1 }}
             className="mt-16 text-center"
         >
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-[0.3em]">Prepared by: Revenue Team - Mathwaa</p>
+            <p className="text-sm font-bold text-gray-400 uppercase tracking-[0.3em]">Prepared by Ammar Mohiyadeen - Performance Marketing @ Mathwaa</p>
         </motion.footer>
 
         <FormulaModal isOpen={showFormulas} onClose={() => setShowFormulas(false)} lang="en" />

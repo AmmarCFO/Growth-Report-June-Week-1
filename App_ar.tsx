@@ -346,7 +346,7 @@ const App_ar: React.FC<{ onToggleLanguage: () => void }> = ({ onToggleLanguage }
             transition={{ delay: 1 }}
             className="mt-16 text-center"
         >
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-[0.3em] font-cairo">إعداد: فريق الإيرادات - مثوى</p>
+            <p className="text-sm font-bold text-gray-400 uppercase tracking-[0.3em] font-cairo">إعداد: عمار محي الدين - تسويق الأداء @ مثوى</p>
         </motion.footer>
 
         <FormulaModal isOpen={showFormulas} onClose={() => setShowFormulas(false)} lang="ar" />
